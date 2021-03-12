@@ -66,8 +66,8 @@ function LED1_Off(){
     console.log("onMessageArrived:"+message.payloadString);
 	document.getElementById("temp").innerHTML=message.payloadString.split("=")[2]
 	document.getElementById("hum").innerHTML=message.payloadString.split("=")[1]
-	document.getElementById("ppm").innerHTML=message.payloadString.split("=")[4]
-	document.getElementById("his").innerHTML=message.payloadString.split("=")[3]
+	document.getElementById("ppm").innerHTML=message.payloadString.split("=")[3]
+	document.getElementById("his").innerHTML=message.payloadString.split("=")[4]
 	
 }
    
