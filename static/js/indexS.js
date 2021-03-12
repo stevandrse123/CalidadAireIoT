@@ -64,8 +64,8 @@ function LED1_Off(){
   // called when a message arrives
   function onMessageArrived(message) {
     console.log("onMessageArrived:"+message.payloadString);
-	document.getElementById("temp","hum").innerHTML=message.payloadString.split("=")[2,1]
-	//document.getElementById("hum").innerHTML=message.payloadString.split("=")[1]
+	<p>document.getElementById("temp").innerHTML=message.payloadString.split("=")[2]
+	document.getElementById("hum").innerHTML=message.payloadString.split("=")[1]<\p>
 	document.getElementById("ppm").innerHTML=message.payloadString.split("=")[3]
 	document.getElementById("his").innerHTML=message.payloadString.split("=")[4]
 	
