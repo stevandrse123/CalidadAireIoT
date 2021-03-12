@@ -14,11 +14,11 @@ app = Flask(__name__)
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 @app.route("/")
 def root():
-	return render_template("indexSs.html")
+	return render_template("index.html")
 
-@app.route("/indexSs")
+@app.route("/index")
 def index():
-	return render_template("indexSs.html")
+	return render_template("index.html")
 
 
 @app.route("/buscar")
