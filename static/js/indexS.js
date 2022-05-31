@@ -41,11 +41,11 @@ function LED1_Off(){
   // called when the client connects
   function onConnect() {
     // Once a connection has been made, make a subscription and send a message.
-    console.log("Conectado...");
+	console.log("Conectado...");
 	client.subscribe("stevandres123/test");
-    message = new Paho.MQTT.Message("hola desde la web");
-    message.destinationName = "stevandres123/test1";
-    client.send(message);
+	message = new Paho.MQTT.Message("hola desde la web");
+	message.destinationName = "stevandres123/test1";
+	client.send(message);
 	
   }
  
@@ -62,11 +62,11 @@ function LED1_Off(){
   }
   // called when a message arrives
   function onMessageArrived(message) {
-    console.log("onMessageArrived:"+message.payloadString);
+	console.log("onMessageArrived:"+message.payloadString);
 	document.getElementById("temp").innerHTML=message.payloadString.split("=")[1]; 
 	document.getElementById("hum").innerHTML=message.payloadString.split("=")[2];
 	document.getElementById("ppm").innerHTML=message.payloadString.split("=")[3];
 	document.getElementById("his").innerHTML=message.payloadString.split("=")[4];
 	
-}
+  }
    
