@@ -22,15 +22,15 @@ function LED1_Off(){
 // Create a client instance
   //client = new Paho.MQTT.Client("postman.cloudmqtt.com", 14970);
   https://www.telecomunicaciones.gob.ec/wp-content/uploads/2016/08/Plan-de-Telecomunicaciones-y-TI..pdf
-  client = new Paho.MQTT.Client("broker.hivemq.com", 1883, "web_" + parseInt(Math.random() * 100, 10));
+  client = new Paho.MQTT.Client("maqiatto.com", 8883, "web_" + parseInt(Math.random() * 100, 10));
 
   // set callback handlers
   client.onConnectionLost = onConnectionLost;
   client.onMessageArrived = onMessageArrived;
   var options = {
    useSSL: false,
-    userName: "stevandres123",
-    password: "Sickdog22As",
+    userName: "stevandres123@gmail.com",
+    password: "esoestodo1994",
     onSuccess:onConnect,
     onFailure:doFail
   }
