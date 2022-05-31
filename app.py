@@ -1,5 +1,5 @@
 
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, markupsafe
 from jinja2.utils import markupsafe
 
 
