@@ -22,15 +22,15 @@ function LED1_Off(){
 // Create a client instance
   //client = new Paho.MQTT.Client("postman.cloudmqtt.com", 14970);
   https://www.telecomunicaciones.gob.ec/wp-content/uploads/2016/08/Plan-de-Telecomunicaciones-y-TI..pdf
-  client = new Paho.MQTT.Client("test.mosquitto.org", 1883, "web_" + parseInt(Math.random() * 100, 10));
+  client = new Paho.MQTT.Client("broker.hivemq.com", 8000, "web_" + parseInt(Math.random() * 100, 10));
 
   // set callback handlers
   client.onConnectionLost = onConnectionLost;
   client.onMessageArrived = onMessageArrived;
   var options = {
    useSSL: false,
-    //userName: "stevandres123@gmail.com",
-    //password: "esoestodo1994",
+    userName: "stevandres123",
+    password: "Sickdog22As",
     onSuccess:onConnect,
     onFailure:doFail
   }
@@ -42,9 +42,9 @@ function LED1_Off(){
   function onConnect() {
     // Once a connection has been made, make a subscription and send a message.
     console.log("Conectado...");
-	//client.subscribe("stevandres123@gmail.com/test");
+	client.subscribe("stevandres123/test");
     message = new Paho.MQTT.Message("hola desde la web");
-    //message.destinationName = "stevandres123@gmail.com/test1";
+    message.destinationName = "stevandres123/test1";
     client.send(message);
 	
   }
