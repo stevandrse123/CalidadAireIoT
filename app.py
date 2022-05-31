@@ -1,5 +1,7 @@
 
 from flask import Flask, render_template, request
+from jinja2.utils import markupsafe
+
 
 #import model
 import json
